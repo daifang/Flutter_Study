@@ -9,6 +9,7 @@ void toast(String msg,
     Color backgroundColor,
     Color textColor,
     Double fontSize]) {
+  Fluttertoast.cancel();
   Fluttertoast.showToast(
       msg: msg,
       toastLength: toastLength != null ? toastLength : Toast.LENGTH_SHORT,

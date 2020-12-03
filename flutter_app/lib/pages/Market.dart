@@ -52,7 +52,7 @@ class PictureListTest extends StatelessWidget {
                       hoverColor: Colors.grey[400],
                       child: Column(children: [
                         Expanded(
-                            flex: 5,
+                            flex: 6,
                             child: ClipRRect(
                               child: FadeInImage.assetNetwork(
                                 placeholder: 'assets/images/loading.gif',
@@ -72,9 +72,8 @@ class PictureListTest extends StatelessWidget {
                         Expanded(
                             flex: 2,
                             child: Padding(
-                              child: Text(
-                                '描述：描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-                                style: TextStyle(fontSize: 10),
+                              child: Row(
+                                children: [Text('发布日期:'), Text('2020/2/3')],
                               ),
                               padding: EdgeInsets.fromLTRB(15, 10, 15, 0),
                             ))
@@ -112,7 +111,7 @@ class PictureListTest extends StatelessWidget {
                 crossAxisCount: 2,
                 shrinkWrap: true,
                 children: _createItems(context),
-                childAspectRatio: 0.65,
+                childAspectRatio: 0.8,
                 physics: NeverScrollableScrollPhysics(),
               )
             ]));

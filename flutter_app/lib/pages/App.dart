@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/dart/toast.dart';
 import './Publish.dart';
 import './Market.dart';
 import './Mine.dart';
 import '../router/routers.dart';
 import '../router/routeStatic.dart';
 import 'package:fluro/fluro.dart';
+import '../dart/toast.dart';
 
 class App extends StatefulWidget {
   App({Key key}) : super(key: key);
@@ -24,7 +26,7 @@ class _MyApp extends State<App> {
     pageList.add(Notes());
     pageList.add(Mine());
     title.add('首页');
-    title.add('疫情一览');
+    title.add('数据请求');
     title.add('个人中心');
   }
 
@@ -49,7 +51,7 @@ class _MyApp extends State<App> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.home), title: Center(child: Text('首页'))),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.map), title: Center(child: Text('疫情一览'))),
+                  icon: Icon(Icons.map), title: Center(child: Text('数据请求'))),
               BottomNavigationBarItem(
                   icon: Icon(Icons.person), title: Center(child: Text('个人页面'))),
             ],
@@ -65,7 +67,7 @@ class _MyApp extends State<App> {
               backgroundColor: Colors.pink[400],
               child: Center(child: Icon(Icons.add)),
               onPressed: () {
-                print('添加');
+                toast('添加操作');
               }),
         ));
   }
