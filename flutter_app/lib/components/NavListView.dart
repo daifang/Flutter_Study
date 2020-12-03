@@ -7,13 +7,14 @@ class NavView extends StatelessWidget {
   Widget _getItem(BuildContext context, item) {
     return (InkWell(
         onTap: () {
-          // Fluttertoast.showToast(
-          //     msg: "${item['title']}",
-          //     toastLength: Toast.LENGTH_LONG,
-          //     gravity: ToastGravity.BOTTOM,
-          //     backgroundColor: Colors.pink,
-          //     textColor: Colors.white,
-          //     fontSize: 16.0);
+          Fluttertoast.showToast(
+              msg: "你点击了我${item['title']}",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Color.fromRGBO(50, 50, 50, 0.8),
+              textColor: Colors.white,
+              fontSize: 16.0);
         },
         child: Center(
             child: Padding(
@@ -34,7 +35,8 @@ class NavView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Material(
+        color: Colors.grey[100],
         child: GridView.count(
             physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.fromLTRB(0, 0, 0, 5),

@@ -12,7 +12,10 @@ class MySwiper extends StatelessWidget {
             padding: EdgeInsets.all(0),
             child: Swiper(
                 itemBuilder: (BuildContext context, int index) {
-                  return (Image.network(imgDataList[index], fit: BoxFit.cover));
+                  return (FadeInImage.assetNetwork(
+                      placeholder: 'assets/images/loading.gif',
+                      image: imgDataList[index],
+                      fit: BoxFit.cover));
                 },
                 itemCount: imgDataList.length,
                 pagination: SwiperPagination(),

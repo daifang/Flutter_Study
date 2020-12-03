@@ -1,13 +1,11 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_app/dart/toast.dart';
 import 'package:flutter_app/http/http.dart';
 import '../http/http.dart';
 
 // 记事页面
 class Notes extends StatefulWidget {
   Notes({Key key, List list}) : super(key: key);
-
   @override
   _NotesState createState() => _NotesState();
 }
@@ -25,7 +23,12 @@ class _NotesState extends State<Notes> {
       if (res['code'] == 500) {
         print('请求失败${res[0]},${res[1]}');
       } else {
-        print('请求成功');
+        print('请求成功${res[0]},${res[1]}');
+        if (res['data']['code'] == 130) {
+          toast(res['data']['msg']);
+          secList.add(Center(child: Text('请求失败')));
+          return;
+        }
         for (int i = 0; i < res['data']['newslist'].length; i++) {
           // print(1);
           for (int j = 0;

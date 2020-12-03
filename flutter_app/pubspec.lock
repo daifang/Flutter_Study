@@ -50,13 +50,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.0"
-  english_words:
+  dio:
     dependency: "direct main"
     description:
-      name: english_words
+      name: dio
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.1.5"
+    version: "3.0.10"
   fake_async:
     dependency: transitive
     description:
@@ -64,23 +64,63 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.2.0-nullsafety.1"
+  fluro:
+    dependency: "direct main"
+    description:
+      name: fluro
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.7.8"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_page_indicator:
+    dependency: transitive
+    description:
+      name: flutter_page_indicator
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.3"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.2.0"
+  flutter_staggered_grid_view:
+    dependency: "direct main"
+    description:
+      name: flutter_staggered_grid_view
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.2"
+  flutter_swiper:
+    dependency: "direct main"
+    description:
+      name: flutter_swiper
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
-  http:
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  fluttertoast:
     dependency: "direct main"
     description:
-      name: http
+      name: fluttertoast
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.12.2"
+    version: "7.1.5"
   http_parser:
     dependency: transitive
     description:
@@ -109,20 +149,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.8.0-nullsafety.1"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.9.2"
-  qs:
-    dependency: "direct main"
-    description:
-      name: qs
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.0.1-nullsafety.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -170,6 +196,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.19-nullsafety.2"
+  transformer_page_view:
+    dependency: transitive
+    description:
+      name: transformer_page_view
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.6"
   typed_data:
     dependency: transitive
     description:
@@ -186,3 +219,4 @@ packages:
     version: "2.1.0-nullsafety.3"
 sdks:
   dart: ">=2.10.0-110 <2.11.0"
+  flutter: ">=1.17.0 <2.0.0"
