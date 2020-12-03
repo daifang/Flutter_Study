@@ -7,8 +7,6 @@ BaseOptions options = BaseOptions(
 );
 Dio dio = Dio(options);
 
-// 无拦截器版本
-
 // Get 请求
 Future get(String path) async {
   var resquest = await dio.get(path);
