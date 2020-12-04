@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app/dart/toast.dart';
 import './Publish.dart';
@@ -9,7 +11,8 @@ import 'package:fluro/fluro.dart';
 import '../dart/toast.dart';
 
 class App extends StatefulWidget {
-  App({Key key}) : super(key: key);
+  final exit;
+  App({Key key, this.exit}) : super(key: key);
   @override
   _MyApp createState() => _MyApp();
 }
@@ -18,13 +21,17 @@ class _MyApp extends State<App> {
   int pageIndex = 0; // 页面索引
   List<Widget> pageList = new List();
   List<String> title = new List();
-
+  @override
+  // TODO: implement widget
+  App get widget => super.widget;
   @override
   void initState() {
     super.initState();
     pageList.add(PictureListTest());
     pageList.add(Notes());
-    pageList.add(Mine());
+    pageList.add(Mine(exit: (state) {
+      widget.exit(state);
+    }));
     title.add('首页');
     title.add('数据请求');
     title.add('个人中心');

@@ -1,15 +1,22 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import '../dart/localStroage.dart';
 
 class Mine extends StatefulWidget {
-  Mine({Key key}) : super(key: key);
+  final exit;
+  Mine({Key key, @required this.exit}) : super(key: key);
 
   @override
   _MineState createState() => _MineState();
 }
 
 class _MineState extends State<Mine> {
+  var localStroage = LocalStroage();
+
+  @override
+  // TODO: implement widget
+  Mine get widget => super.widget;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -30,7 +37,14 @@ class _MineState extends State<Mine> {
               child: Container(
                 alignment: Alignment.center,
                 color: Colors.primaries[(index % 18)],
-                child: Text('颜色代码: ${index % 18}'),
+                child: ButtonTheme(
+                  child: RaisedButton(
+                      child: Text('退出登录'),
+                      onPressed: () {
+                        localStroage.clear();
+                        widget.exit(false);
+                      }),
+                ),
               ),
             );
           }, childCount: 10),
