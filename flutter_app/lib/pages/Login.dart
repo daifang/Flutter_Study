@@ -31,12 +31,12 @@ class _LoainState extends State<Login> {
             padding: EdgeInsets.all(20),
             child: Column(
               children: [
-                Form(
-                    child: Column(
+                Column(
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
                           labelText: "用户名",
+                          helperText: '用户名:123',
                           labelStyle: TextStyle(color: Colors.pink[300]),
                           errorText: userNameError,
                           enabledBorder: OutlineInputBorder(
@@ -62,6 +62,7 @@ class _LoainState extends State<Login> {
                         obscureText: true,
                         decoration: InputDecoration(
                             labelText: "密码",
+                            helperText: '密码:123',
                             labelStyle: TextStyle(color: Colors.pink[300]),
                             errorText: passwordError,
                             enabledBorder: OutlineInputBorder(
@@ -84,7 +85,7 @@ class _LoainState extends State<Login> {
                       ),
                     ),
                   ],
-                )),
+                ),
                 Padding(
                   padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: Row(
@@ -96,6 +97,14 @@ class _LoainState extends State<Login> {
                             child: RaisedButton(
                               onPressed: () {
                                 toast('正在登陆');
+                                if (userName == null) {
+                                  toast('请填写用户名');
+                                  return;
+                                }
+                                if (password == null) {
+                                  toast('请填写密码');
+                                  return;
+                                }
                                 if (userName == '123' && password == '123') {
                                   // 登录状态存储
                                   localStroage.setItem('isLogin', true);

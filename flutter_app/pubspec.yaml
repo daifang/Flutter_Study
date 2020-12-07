@@ -27,15 +27,15 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
-  dio: ^3.0.10
-  flutter_swiper: ^1.1.6
-  flutter_screenutil: ^3.2.0
-  fluttertoast: ^7.1.5
-  flutter_staggered_grid_view: ^0.3.2
-  fluro: ^1.7.8
-  shared_preferences: ^0.5.12+4
-
+  cupertino_icons: ^1.0.0 
+  dio: ^3.0.10                         # http 网络请求
+  flutter_swiper: ^1.1.6               # 轮播图插件
+  flutter_screenutil: ^3.2.0           # 屏幕适配(还没使用)
+  fluttertoast: ^7.1.5                 # 吐司
+  flutter_staggered_grid_view: ^0.3.2  # grid布局(还未使用)
+  fluro: ^1.7.8                        # 路由
+  shared_preferences: ^0.5.12+4        # 类似 localStroage功能 的插件
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter

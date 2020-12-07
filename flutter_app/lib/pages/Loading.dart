@@ -12,8 +12,11 @@ class Loading extends StatelessWidget {
             backgroundColor: Colors.pink[300],
             title: Text('XXX'),
           ),
-          body: CircularProgressIndicator(
-            backgroundColor: Colors.pink[100],
+          body: Center(
+            child: CircularProgressIndicator(
+              backgroundColor: Colors.pink[100],
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.pink[300]),
+            ),
           ),
         ));
   }

@@ -121,7 +121,10 @@ class PictureListTest extends StatelessWidget {
           } else {
             // 加载中
             return Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.pink[100],
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.pink[300]),
+              ),
             );
           }
         });
