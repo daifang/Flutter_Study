@@ -51,7 +51,7 @@ class _MyApp extends State<MyApp> {
     }
     if (isLogin) {
       return App(
-        exit: (state) {
+        exit: (bool state) {
           setState(() {
             isLogin = state;
           });

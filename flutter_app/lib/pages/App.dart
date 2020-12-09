@@ -29,7 +29,7 @@ class _MyApp extends State<App> {
     super.initState();
     pageList.add(PictureListTest());
     pageList.add(Notes());
-    pageList.add(Mine(exit: (state) {
+    pageList.add(Mine(exit: (bool state) {
       widget.exit(state);
     }));
     title.add('首页');

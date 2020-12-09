@@ -5,7 +5,6 @@ import '../dart/localStroage.dart';
 class Login extends StatefulWidget {
   final login;
   Login({Key key, @required this.login}) : super(key: key);
-
   @override
   _LoainState createState() => _LoainState();
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import '../dart/toast.dart';
 
 class NavView extends StatelessWidget {
   const NavView({Key key, this.dataList}) : super(key: key);
@@ -7,14 +7,7 @@ class NavView extends StatelessWidget {
   Widget _getItem(BuildContext context, item) {
     return (InkWell(
         onTap: () {
-          Fluttertoast.showToast(
-              msg: "你点击了我${item['title']}",
-              toastLength: Toast.LENGTH_SHORT,
-              gravity: ToastGravity.BOTTOM,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Color.fromRGBO(50, 50, 50, 0.8),
-              textColor: Colors.white,
-              fontSize: 16.0);
+          toast("你点击了我${item['title']}");
         },
         child: Center(
             child: Padding(

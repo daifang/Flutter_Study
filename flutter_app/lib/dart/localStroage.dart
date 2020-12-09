@@ -16,7 +16,7 @@ class LocalStroage {
       print('bool');
       localStroage.setBool(key, value);
     } else {
-      toast('数据类型有误，仅支持int double List<String> bool String');
+      toast('数据类型有误，仅支持int、 double、 List<String>、 bool、 String');
     }
   }
 
