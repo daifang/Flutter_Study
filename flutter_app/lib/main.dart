@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './pages/App.dart';
-import './pages/Login.dart';
-import 'dart/localStroage.dart';
-import 'pages/Loading.dart';
+import './pages/App.dart'; // 首页
+import './pages/Login.dart'; // 登录页
+import 'dart/localStroage.dart'; // localStroage
+import 'pages/Loading.dart'; // 加载页
 
 void main() {
   SystemUiOverlayStyle systemUiOverlayStyle =

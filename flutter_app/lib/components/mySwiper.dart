@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class MySwiper extends StatelessWidget {
   const MySwiper({Key key, this.imgDataList}) : super(key: key);
-  final List imgDataList;
+  final List<String> imgDataList;
   @override
   Widget build(BuildContext context) {
     return Container(
